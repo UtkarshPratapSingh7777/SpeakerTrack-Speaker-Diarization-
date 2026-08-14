@@ -1,0 +1,11 @@
+from __future__ import annotations
+class DiarizationPipelineError(Exception):
+class ConfigurationError(DiarizationPipelineError):
+class AudioProcessingError(DiarizationPipelineError):
+class UnsupportedAudioFormatError(AudioProcessingError):
+class CorruptedAudioError(AudioProcessingError):
+class AudioTooShortError(AudioProcessingError):
+class VADProcessingError(DiarizationPipelineError):
+class EmbeddingExtractionError(DiarizationPipelineError):
+class ClusteringError(DiarizationPipelineError):
+class PipelineError(DiarizationPipelineError):
